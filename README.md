@@ -54,7 +54,7 @@ npm run migration:run
 
 Executar api
 ```bash: 
-npm start:dev
+npm run start:dev
 ```
 ___
 
@@ -69,7 +69,7 @@ npm install
 ```
 Executar aplicação
 ```bash: 
-npm start
+npm run start
 ```
 ## ENDPOINTS
 
