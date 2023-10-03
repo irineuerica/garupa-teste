@@ -15,7 +15,7 @@ Aplicação web e API REST
 
 ## Variáveis de Ambiente
 
-Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
+Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env localizado na pasta da api (node-api)
 
 `DB_HOST`
 
