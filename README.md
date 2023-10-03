@@ -1,69 +1,143 @@
-# garupa-teste
 
-Criar .env utilizando o .env.example como base. Preecher dados com a informações do banco (host, user, password...)
+# Garupa teste
 
-Criar base de dados
+Aplicação web e API REST 
+
+
+
+
+
+## Autores
+
+- [Érica irineu](https://www.github.com/irineuerica)
+
+
+
+## Variáveis de Ambiente
+
+Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
+
+`DB_HOST`
+
+`DB_PORT`
+
+`DB_USER`
+
+`DB_PASS`
+
+`DB_NAME = Garupa`
+
+`JWT_PASS`
+
+
+
+
+## Como executar o projeto
+
+Criar base de dados (Banco PostgreSQL)
+```bash: 
 CREATE DATABASE Garupa
-
-entrar na pasta da api (node-api)
+```
+Entrar na pasta da api (node-api)
+```bash: 
 cd /node-api
+```
 instalar dependencias
+```bash: 
 npm install
+```
 
-MIGRATIONS                               
+Executar migration
+```bash:                                
 npm run migration:run
+```
 
+Executar api
+```bash: 
 npm start:dev
+```
+___
 
-entrar na pasta da aplicação react (react-app)
+Entrar na pasta da aplicação react (react-app)
+```bash: 
 cd /react-app
+```
 
-instalar dependencias
+Instalar dependencias
+```bash: 
 npm install
-
+```
+Executar aplicação
+```bash: 
 npm start
+```
+## ENDPOINTS
 
-ENDPOINTS 
+* Autenticação 
 
-AUTENTICAÇÃO 
--Criar usuário
+Criar usuário
+
 url: http://localhost:3013
+
 método: POST
-body: {
+
+```json: 
+body:{
     "name": "exemplo",
     "email": "exemplo@email.com",
     "password": "1234"
-
 }
--login
+```
+_____
+
+* Login
+
 url: http://localhost:3013/login
+
 método: POST
+```json: 
 body: {
     "email": "exemplo@email.com",
     "password": "1234"
 }
+```
 _____
 
 DADOS USUÁRIO - necessita de bearer token retornado no login
--listar usuários
-url: http://localhost:3013/user
+
+* Listar usuários
+
+url: http://localhost:3013/
+
 método: GET
 
--consultar usuário
+___
+
+ * Consultar usuário
+ 
 url: http://localhost:3013/user/:id
+
 método: GET
 
--deletar usuário
+___
+
+* Deletar usuário
+
 url: http://localhost:3013/user/:id
+
 método: DELETE
 
--alterar usuário
+___
+
+* Alterar usuário
 url: http://localhost:3013/user/:id
+
 método: PUT
+
+```json: 
 body: {
     "name": "exemplo",
-
     "email": "exemplo@email.com",
     "password": "1234"
-
 }
+```
